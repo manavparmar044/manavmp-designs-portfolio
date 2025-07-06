@@ -1,32 +1,57 @@
-import React from 'react'
+import { ArrowRight, Eye } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
-function Hero() {
+export default function Hero() {
   return (
-    <div>
-      <section className="flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8 h-[calc(100vh-80px)]">
-        <h2 className="text-5xl sm:text-6xl font-bold leading-tight">
-          Design That Defines Brands
-        </h2>
-        <p className="text-lg sm:text-xl mt-4 max-w-2xl text-white/80">
-          I’m Manav Manish Parmar — building bold, strategic identities for startups, creators, and companies ready to make their mark.
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-white px-4">
+      <div className="max-w-4xl mx-auto text-center">
+        {/* Breadcrumb */}
+        {/* <div className="flex items-center justify-center gap-2 text-sm text-slate-600 mb-8">
+          <span>Home</span>
+          <span>/</span>
+          <span>Hero Section</span>
+        </div> */}
+
+        {/* Main Headline */}
+        <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-6 leading-tight">
+          Crafting Iconic Brands
+          <br />
+          <span className="text-slate-600">Since 2021</span>
+        </h1>
+
+        {/* Subtext */}
+        <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+          Hi, I'm <span className="font-semibold text-slate-900">Manav Manish Parmar</span>, a brand and logo designer helping
+          startups and global brands stand out with timeless visual identities.
         </p>
-        <div className="mt-8 flex gap-4">
-          <a
-            href="#portfolio"
-            className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-200 transition"
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Button
+            size="lg"
+            className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 text-lg font-medium rounded-full transition-all duration-300 hover:scale-105"
           >
-            Explore Work
-          </a>
-          <a
-            href="#contact"
-            className="border border-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-black transition"
+            <Eye className="mr-2 h-5 w-5" />
+            View Portfolio
+          </Button>
+
+          <Button
+            variant="outline"
+            size="lg"
+            className="border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-8 py-4 text-lg font-medium rounded-full transition-all duration-300 hover:scale-105 bg-transparent"
           >
-            Book a Project
-          </a>
+            Let's Work Together
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
         </div>
-      </section>
-    </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-slate-400 rounded-full mt-2 animate-pulse"></div>
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
-
-export default Hero
