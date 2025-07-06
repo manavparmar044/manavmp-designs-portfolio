@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { ArrowUpRight } from "lucide-react"
 
 const projects = [
@@ -5,19 +6,19 @@ const projects = [
     name: "Royal Palms",
     category: "Resort Brand Identity",
     description: "Well researched logo and brand identity for luxury resort and spa.",
-    color: "from-blue-500 to-purple-600",
+    image: "/assets/project1-thumbnail.webp",
   },
   {
     name: "Lookin",
     category: "Eye Glasses brand identity",
     description: "Brand identity design for eyewear brand",
-    color: "from-pink-400 to-rose-500",
+    image: "/assets/project2-thumbnail.webp",
   },
   {
     name: "Xsellrator",
-    category: "Digital services brand identity and ui kit",
-    description: "A ui kit and brand identity made for Xsellrator",
-    color: "from-orange-500 to-red-600",
+    category: "Digital services brand identity and UI kit",
+    description: "A UI kit and brand identity made for Xsellrator",
+    image: "/assets/project3-thumbnail.png",
   },
 ]
 
@@ -40,15 +41,19 @@ export default function Portfolio() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="group cursor-pointer">
-              {/* Project Image Placeholder */}
-              <div
-                className={`aspect-[4/3] bg-gradient-to-br ${project.color} rounded-2xl mb-6 relative overflow-hidden group-hover:scale-105 transition-transform duration-300`}
-              >
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-white text-3xl font-bold">{project.name}</span>
-                </div>
+              {/* Project Image */}
+              <div className="aspect-[4/3] rounded-2xl mb-6 relative overflow-hidden group-hover:scale-105 transition-transform duration-300">
+                <Image
+                  src={project.image}
+                  alt={project.name}
+                  fill
+                  className="object-cover rounded-2xl group-hover:brightness-110 transition duration-300"
+                />
 
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
+
+                
                 {/* Hover Arrow */}
                 <div className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <ArrowUpRight className="h-5 w-5 text-white" />
