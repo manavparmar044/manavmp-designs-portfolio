@@ -24,7 +24,7 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <section className="py-20 px-4 bg-white">
+    <section id = "portfolio" className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="flex items-center gap-3 mb-8">

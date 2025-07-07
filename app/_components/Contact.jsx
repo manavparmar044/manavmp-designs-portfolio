@@ -126,7 +126,7 @@ export default function Contact() {
 
         {/* Footer */}
         <div className="text-center mt-16 pt-8 border-t border-slate-200">
-          <p className="text-slate-600">© 2024 Manav Manish Parmar. Crafting brands that matter.</p>
+          <p className="text-slate-600">© 2025 Manav Manish Parmar. Crafting brands that matter.</p>
         </div>
       </div>
     </section>

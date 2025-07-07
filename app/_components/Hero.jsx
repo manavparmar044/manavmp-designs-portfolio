@@ -1,16 +1,12 @@
+"use client"
+
 import { ArrowRight, Eye } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-white px-4">
+    <section data-cursor-color="bg-blue" id = "hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-white px-4">
       <div className="max-w-4xl mx-auto text-center">
-        {/* Breadcrumb */}
-        {/* <div className="flex items-center justify-center gap-2 text-sm text-slate-600 mb-8">
-          <span>Home</span>
-          <span>/</span>
-          <span>Hero Section</span>
-        </div> */}
 
         {/* Main Headline */}
         <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-6 leading-tight">
@@ -27,18 +23,29 @@ export default function Hero() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button
-            size="lg"
-            className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 text-lg font-medium rounded-full transition-all duration-300 hover:scale-105"
-          >
-            <Eye className="mr-2 h-5 w-5" />
-            View Portfolio
-          </Button>
+        <Button
+  onClick={() => {
+    const el = document.getElementById("portfolio")
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" })
+    }
+  }}
+  size="lg"
+  className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 text-lg font-medium rounded-full transition-all duration-300 hover:scale-105 cursor-pointer"
+>
+  <Eye className="mr-2 h-5 w-5" />
+  View Portfolio
+</Button>
 
-          <Button
+          <Button onClick={() => {
+    const el = document.getElementById("contact")
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" })
+    }
+  }}
             variant="outline"
             size="lg"
-            className="border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-8 py-4 text-lg font-medium rounded-full transition-all duration-300 hover:scale-105 bg-transparent"
+            className="border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-8 py-4 text-lg font-medium rounded-full transition-all duration-300 hover:scale-105 bg-transparent cursor-pointer"
           >
             Let's Work Together
             <ArrowRight className="ml-2 h-5 w-5" />
