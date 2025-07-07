@@ -50,7 +50,7 @@ export default function CustomCursor() {
 
       <div
         ref={cursorRef}
-        className="fixed top-0 left-0 w-6 h-6 bg-blue-500 rounded-full pointer-events-none z-[9999] will-change-transform"
+        className="fixed top-0 left-0 w-6 h-6 bg-blue-500 rounded-full pointer-events-none z-[9999] will-change-transform hidden sm:block"
       />
     </>
   )
