@@ -11,7 +11,6 @@ import CustomCursor from "./_components/CustomCursor"
 export default function Home() {
   return (
     <>
-    <CustomCursor />
     <Header />
     <main className="min-h-screen bg-white">
       <Hero />

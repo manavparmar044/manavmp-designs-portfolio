@@ -2,7 +2,7 @@ import { Palette, Target, Lightbulb, Award, Users, TrendingUp } from "lucide-rea
 
 export default function About() {
   return (
-    <section className="py-20 px-4 bg-white">
+    <section id = "about" className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="flex items-center gap-3 mb-12">
