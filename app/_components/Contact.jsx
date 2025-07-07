@@ -21,9 +21,31 @@ export default function Contact() {
     message: "",
   })
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
+  
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+  
+      if (res.ok) {
+        alert("Message sent successfully!")
+        setFormData({
+          name: "",
+          email: "",
+          projectType: "",
+          message: "",
+        })
+      } else {
+        alert("Failed to send message.")
+      }
+    } catch (err) {
+      console.error(err)
+      alert("Something went wrong.")
+    }
   }
 
   const handleChange = (field, value) => {
