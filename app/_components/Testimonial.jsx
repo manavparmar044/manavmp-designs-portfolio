@@ -2,7 +2,7 @@ import { Star } from "lucide-react"
 
 const testimonials = [
   {
-    quote: "Working with [Your Name] was transformative. The new brand identity elevated our entire presence.",
+    quote: "Working with Manav Manish Parmar was transformative. The new brand identity elevated our entire presence.",
     author: "Amanda R.",
     role: "Creative Director, Velox",
     rating: 5,
